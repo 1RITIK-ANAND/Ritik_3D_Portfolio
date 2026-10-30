@@ -14,7 +14,8 @@ import { createNurseGreeting } from './nurse.js';
 
   const camera = new THREE.PerspectiveCamera(42, innerWidth / innerHeight, 0.1, 150);
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'low-power' });
-  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, innerWidth < 700 ? 1 : 1.35));
+  const maxPixelRatio = innerWidth < 700 ? Math.min(window.devicePixelRatio, 1.5) : window.devicePixelRatio;
+  renderer.setPixelRatio(maxPixelRatio);
   renderer.setSize(innerWidth, innerHeight, false);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;

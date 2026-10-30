@@ -1,0 +1,104 @@
+/* Focus neon on display typography; leave long-form copy crisp. */
+:root {
+  --neon-soft: 0 0 10px rgba(52, 217, 242, .38), 0 0 28px rgba(52, 217, 242, .18);
+}
+
+.hero h1 {
+  color: #effeff;
+  text-shadow: 0 0 4px rgba(231, 253, 255, .4), 0 0 30px rgba(52, 217, 242, .24);
+}
+
+.hero h1 .steel {
+  background-image: linear-gradient(110deg, #d8fdff 10%, #52e4fa 30%, #fff 47%, #9c92ff 62%, #52e4fa 82%, #d8fdff);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 0 12px rgba(52, 217, 242, .28));
+}
+
+#typed, .eyebrow, .brand span, .sec-title small, .cy {
+  text-shadow: var(--neon-soft);
+}
+
+.hero .lead {
+  color: #baffdf;
+  text-shadow: 0 0 6px rgba(80, 255, 170, .42), 0 0 18px rgba(80, 255, 170, .20);
+}
+
+.caret {
+  text-shadow: 0 0 8px var(--amber), 0 0 20px rgba(255, 180, 84, .5);
+}
+
+.sec-title {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  color: #e8fcff;
+  text-shadow: var(--neon-soft);
+}
+
+.sec-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: min(100%, 240px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), #a398ff, transparent);
+  box-shadow: 0 0 12px rgba(52, 217, 242, .55);
+  transform-origin: left;
+}
+
+.stats strong {
+  color: #ccfaff;
+  text-shadow: var(--neon-soft);
+}
+
+.panel h3, nav a, .contact-links a, .link, .chips span {
+  transition: color .25s ease, text-shadow .25s ease;
+}
+
+.panel:hover h3, nav a:hover, nav a:focus-visible,
+.contact-links a:hover, .contact-links a:focus-visible,
+.link:hover, .link:focus-visible, .chips span:hover {
+  color: #a4f6ff;
+  text-shadow: var(--neon-soft);
+}
+
+.btn, .cta {
+  transition: box-shadow .25s ease, border-color .25s ease;
+}
+
+.btn:hover, .btn:focus-visible, .cta:hover, .cta:focus-visible {
+  border-color: #9af4ff;
+  box-shadow: 0 0 16px rgba(52, 217, 242, .32), inset 0 0 12px rgba(52, 217, 242, .12);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1.in { animation: neon-breathe 4s ease-in-out infinite; }
+  .hero h1.in .steel { animation: neon-shimmer 7s ease-in-out infinite; }
+  .typed.in #typed { animation: neon-breathe 3.8s ease-in-out infinite; }
+  .sec-title.in::after { animation: neon-line 4.5s ease-in-out infinite; }
+}
+
+@keyframes neon-breathe {
+  0%, 100% { text-shadow: 0 0 8px rgba(52, 217, 242, .30), 0 0 24px rgba(52, 217, 242, .15); }
+  50% { text-shadow: 0 0 12px rgba(52, 217, 242, .55), 0 0 38px rgba(52, 217, 242, .30); }
+}
+
+@keyframes neon-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes neon-line {
+  0%, 100% { opacity: .6; transform: scaleX(.70); }
+  50% { opacity: 1; transform: scaleX(1); }
+}
+
+@media (max-width: 600px) {
+  .hero h1 .steel { filter: none; }
+  .sec-title::after { width: min(100%, 170px); }
+}

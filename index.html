@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ritik Anand | Manufacturing & Automation · Industrial AI · Orthopedic Engineering</title>
+<meta name="description" content="Portfolio of Ritik Anand - M.Tech scholar in Manufacturing & Automation (NIT Hamirpur), Advance Operations Intern at Stryker. Digital Twin, Industrial AI, Additive Manufacturing, Python & SQL." />
+<meta name="theme-color" content="#0C0C0C" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/neon.css" />
+<script type="importmap">
+  { "imports": { "three": "./js/vendor/three.module.min.js" } }
+</script>
+</head>
+<body>
+
+<canvas id="bg" aria-hidden="true"></canvas>
+<div id="veil" aria-hidden="true"></div>
+<div id="glow" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <a href="#home" class="brand">RA<span>.</span></a>
+  <nav id="menu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#game">Play</a>
+    <a href="#contact" class="cta">Contact</a>
+  </nav>
+  <button id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow reveal">M.Tech · Manufacturing &amp; Automation · NIT Hamirpur</p>
+    <h1 class="reveal">Ritik<br /><span class="steel">Anand</span></h1>
+    <p class="typed reveal"><span id="typed"></span><b class="caret">|</b></p>
+    <p class="lead reveal">Where engineering, innovation, and healthcare come together. I work at the intersection of manufacturing, product development, data analytics, and digital technologies to solve real-world challenges in medical-device engineering</p>
+    <div class="hero-btns reveal">
+      <a class="btn primary" href="#projects">See my work</a>
+      <a class="btn ghost" href="#contact">Let's talk</a>
+    </div>
+    <ul class="stats reveal">
+      <li><strong data-count="6">0</strong><span>Projects</span></li>
+      <li><strong data-count="3">0</strong><span>Core domains</span></li>
+      <li><strong data-count="2026">0</strong><span>At Stryker since</span></li>
+    </ul>
+  </div>
+  <div class="scroll-hint">scroll &middot; the robot follows</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2 class="sec-title reveal"><small>01</small> About</h2>
+  <div class="grid two">
+    <article class="panel tilt reveal">
+      <p>I'm a research-driven M.Tech scholar in <b>Manufacturing &amp; Automation</b> at NIT Hamirpur, currently an <b>Advance Operations Intern at Stryker, Gurugram</b>. I like working at the crossing of mechanical systems, computational intelligence and Industry 4.0.</p>
+      
+    </article>
+    <article class="panel tilt reveal">
+      <h3>What I'm into</h3>
+      <div class="chips big">
+        <span>Orthopedic Engineering</span><span>Robot-Assisted Surgery</span><span>Digital Twin</span><span>Additive Manufacturing</span><span>Industrial AI</span><span>Process Capability &amp; SPC</span><span>GD&amp;T</span><span>Smart Machining</span><span>Micro-manufacturing</span><span>Generative AI</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <h2 class="sec-title reveal"><small>02</small> Experience</h2>
+  <div class="timeline">
+    <article class="tl-item panel reveal">
+      <time>Jul 2026 – Present</time>
+      <h3>Advance Operations Intern (JR) <em>@ Stryker</em></h3>
+      <p class="loc">Gurugram, Haryana, India</p>
+      <ul>
+        <li>Working on orthopedic hip and knee instrument manufacturing, from design review and process flow to risk analysis and control plans.</li>
+        <li>Applying DFMEA / PFMEA, inspection planning, GD&amp;T and process-capability thinking to real shop-floor questions.</li>
+        <li>Building internal Python / SQL tooling to automate capability analysis and reporting.</li>
+      </ul>
+    </article>
+    <article class="tl-item panel reveal">
+      <time>Sep – Nov 2023</time>
+      <h3>Summer Intern <em>@ Google Cloud</em></h3>
+      <ul>
+        <li>Hands-on with core GCP services: Compute Engine, Cloud Storage, BigQuery, Cloud Run and GKE.</li>
+        <li>Explored cloud-computing fundamentals.</li>
+      </ul>
+    </article>
+    <article class="tl-item panel reveal">
+      <time>Jun – Nov 2022</time>
+      <h3>Intern <em>@ Tata Motors</em></h3>
+      <ul>
+        <li>Assisted in inspection and basic diagnostics of commercial vehicles during servicing.</li>
+        <li>Observed assembly components, powertrain systems and maintenance procedures; supported service engineers with troubleshooting workflows.</li>
+      </ul>
+    </article>
+    <article class="tl-item panel reveal">
+      <time>Apr – Jun 2022</time>
+      <h3>Virtual Internship <em>@ Salesforce</em></h3>
+      <ul><li>Introduction to CRM platforms and cloud business workflows.</li></ul>
+    </article>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2 class="sec-title reveal"><small>03</small> Skills</h2>
+  <div class="grid three">
+    <article class="panel tilt reveal">
+      <div class="ico">⚙</div>
+      <h3>Manufacturing &amp; Quality</h3>
+      <div class="chips"><span>Root Cause Analysis</span><span>Lean Manufacturing</span><span>DFMEA / PFMEA</span><span>GD&amp;T</span><span>SPC &amp; Cpk / Ppk</span><span>Inspection Planning</span><span>Control Plans</span><span>CNC · Wire EDM</span></div>
+    </article>
+    <article class="panel tilt reveal">
+      <div class="ico">◈</div>
+      <h3>Design &amp; CAD/CAM</h3>
+      <div class="chips"><span>SOLIDWORKS</span><span>AutoCAD</span><span>CAD/CAM</span><span>Model-Based Definition</span><span>Tolerance Analysis</span></div>
+    </article>
+    <article class="panel tilt reveal">
+      <div class="ico">⌬</div>
+      <h3>Code, Data &amp; AI</h3>
+      <div class="chips"><span>Python</span><span>SQL</span><span>PostgreSQL</span><span>HTML · CSS · JS</span><span>Google Cloud</span><span>Generative AI</span><span>Statistical Analysis</span></div>
+    </article>
+  </div>
+
+  <div class="grid two gap-top">
+    <article class="panel reveal">
+      <h3>Certifications</h3>
+      <ul class="plain">
+        <li><a class="link" href="https://www.linkedin.com/learning/certificates/d9d8c322262108f7174b2135fa7f8ae29e9b0f1df484dd70b3c35f2e833677fa?u=2105537" target="_blank" rel="noopener noreferrer">CSCMP Supply Chain Foundations: Manufacturing and Service Operations Professional Certificate ↗</a></li>
+        <li><a class="link" href="https://www.linkedin.com/learning/certificates/7cdf0ace681a63ac5d19be8369c80d3d88686e934a1c7e1031b3fcd44eaa58ae/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BYcpNT6E8QOqJbjSBl%2BfrgA%3D%3D" target="_blank" rel="noopener noreferrer">Career Essentials in Generative AI by Microsoft and LinkedIn ↗</a></li>
+        <li>Microsoft Certified: Azure AI Cloud Developer Associate</li>
+        <li>GIS for Supply Chain Management</li>
+        <li>Certificate of Proficiency in French (Nalanda University)</li>
+      </ul>
+    </article>
+    <article class="panel reveal">
+      <h3>Education</h3>
+      <ul class="plain">
+        <li><b>M.Tech, Manufacturing &amp; Automation</b><br /><span class="muted">National Institute of Technology Hamirpur · 2025 - 2027</span></li>
+        <li><b>B.Tech, Mechanical Engineering</b><br /><span class="muted">Bihar Engineering University, Patna · 2019 – 2023</span></li>
+        <li><b>Class XII, Science</b><br /><span class="muted">B.S. College Saharsa · 2017 – 2019</span></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2 class="sec-title reveal"><small>04</small> Projects</h2>
+  <div class="grid three">
+    <article class="panel tilt card reveal">
+      <span class="tag">Python · JS · PostgreSQL</span>
+      <h3>Process Capability Analyzer</h3>
+      <p class="cy"><b>Currently working</b></p>
+      <p>A web tool that takes measurement data and runs the full capability flow: normality tests (Anderson-Darling / Ryan-Joiner), outlier handling, non-normal fallbacks, Cpk / Ppk and a capability six-pack style report, all in one click.</p>
+    </article>
+    <article class="panel tilt card reveal">
+      <span class="tag">Quality · Dashboards</span>
+      <h3>Supplier Assessment Dashboard</h3>
+      <p>Role-aware scoring workflow with a Python API and an HTML/CSS/JS front end. Moved from SQLite to a PostgreSQL-ready architecture with authentication in mind.</p>
+    </article>
+    <article class="panel tilt card reveal">
+      <span class="tag">Python · Conversational Applications</span>
+      <h3>Chatbot</h3>
+      <p>A simple, modular Python application that simulates conversational responses. Designed with clarity and extensibility in mind, it is ideal for beginners learning to structure chatbot logic or integrate basic AI functionality.</p>
+      <a class="link" href="https://chatbot-nj1r.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Chatbot live demo (opens in a new tab)">Try the chatbot ↗</a>
+    </article>
+    <article class="panel tilt card reveal">
+      <span class="tag">Orthopedics · Design Review</span>
+      <h3>Orthopedic Instrument Process Flow</h3>
+      <p>Process flow diagrams, DFMEA / PFMEA, control-plan logic and V&amp;V / FAI planning for hip and knee instrument components.</p>
+    </article>
+    <article class="panel tilt card reveal">
+      <span class="tag">Predictive Modeling · Healthcare Analytics</span>
+      <h3>Health Insurance Cost Prediction</h3>
+      <p>A predictive model that estimates individual health insurance costs using age, sex, BMI, number of children, smoking status, and region. It helps individuals understand potential healthcare expenses and supports insurers in refining pricing strategies.</p>
+      <a class="link" href="https://health-insurance-cost-prediction-iqc8.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Health Insurance Cost Prediction live demo (opens in a new tab)">Explore the predictor ↗</a>
+    </article>
+    <article class="panel tilt card reveal">
+      <span class="tag">Renewable Energy · Design &amp; Manufacturing</span>
+      <h3>Mini Wind Turbine</h3>
+      <ul class="plain">
+        <li>Designed and manufactured a mini wind turbine with 300 mm blades, integrating a synchronous motor as a generator for renewable energy generation at low wind speeds.</li>
+        <li>Performed electrical wiring, circuit integration, and load testing to successfully power a bulb, demonstrating practical electrical energy conversion and system functionality.</li>
+        <li>Achieved 20–50 W power output at 9–15 km/h wind speed, evaluating system performance through experimental testing and data analysis.</li>
+      </ul>
+    </article>
+    <article class="panel tilt card reveal">
+      <span class="tag">Open to collaborate</span>
+      <h3>Your idea here</h3>
+      <p>Smart machining, additive manufacturing, digital twins or manufacturing analytics. If it needs precision and code, let's talk.</p>
+      <a class="link" href="#contact">Start a conversation →</a>
+    </article>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="section">
+  <h2 class="sec-title reveal"><small>05</small> Research focus</h2>
+  <div class="grid two">
+    <article class="panel tilt reveal">
+      <h3>Digital Twin for Intelligent Manufacturing</h3>
+      <p>Synthesising literature on real-time condition monitoring, predictive maintenance and process optimisation in smart machining and micro-manufacturing, bridging theoretical models with physical reality.</p>
+    </article>
+    <article class="panel tilt reveal">
+      <h3>Additive Manufacturing</h3>
+      <p>Exploring AM for space payloads and orthopedic components, and how manufacturing data can drive better process control and quality.</p>
+    </article>
+  </div>
+  <p class="aim reveal">Long-term aim: take academic research into practice with premier R&amp;D organisations in defence and space applications.</p>
+</section>
+
+<!-- GAME -->
+<section id="game" class="section game-sec">
+  <h2 class="sec-title reveal"><small>06</small> Zero-Defect Run</h2>
+  <p class="reveal center muted">Catch the <b class="cy">in-tolerance</b> parts, dodge the <b class="rd">defects</b>. Move with mouse / touch or ← → keys.</p>
+  <div class="game-wrap reveal">
+    <div class="hud">
+      <span>Score <b id="score">0</b></span>
+      <span>Best <b id="best">0</b></span>
+      <span>Lives <b id="lives">❤❤❤</b></span>
+    </div>
+    <canvas id="gcanvas" width="480" height="560"></canvas>
+    <div id="overlay">
+      <h3 id="ov-title">Ready?</h3>
+      <p id="ov-text">Keep the line at zero defects.</p>
+      <button id="start" class="btn primary" type="button">Start</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2 class="sec-title reveal"><small>07</small> Contact</h2>
+  <div class="grid two">
+    <article class="panel reveal">
+      <h3>Let's build something precise</h3>
+      <p>Open to internships, research collaborations and conversations about manufacturing, automation and AI.</p>
+      <p class="contact-links">
+        <a href="mailto:ritikanand243@gmail.com">ritikanand243@gmail.com</a>
+        <a href="https://www.linkedin.com/in/ritikanand243" target="_blank" rel="noopener noreferrer">linkedin.com/in/ritikanand243</a>
+        <a href="https://github.com/1RITIK-ANAND" target="_blank" rel="noopener noreferrer">GitHub · 1RITIK-ANAND ↗</a>
+        <span class="muted">Saharsa, Bihar · Gurugram, Haryana, India</span>
+      </p>
+    </article>
+    <form class="panel reveal" id="form">
+      <label>Your name<input id="f-name" required autocomplete="name" /></label>
+      <label>Message<textarea id="f-msg" rows="4" required></textarea></label>
+      <button class="btn primary" type="submit">Send via email</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">© <span id="yr"></span> Ritik Anand · Built with HTML, CSS &amp; JavaScript</footer>
+
+<script type="module" src="js/robot.js"></script>
+<script src="js/main.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

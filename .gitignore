@@ -1,0 +1,13 @@
+# Generated deployment output
+_site/
+
+# Local dependencies and temporary files
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# Do not publish local secrets
+.env
+.env.*
+!.env.example

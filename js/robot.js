@@ -561,8 +561,8 @@ import { createNurseGreeting } from './nurse.js';
       // Live progress percentage dikhane ke liye
       const progressText = document.getElementById('progress-text');
       if (xhr.lengthComputable && progressText) {
-        const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
-        progressText.innerText = `Loading: ${percentComplete}% completed`;
+        const percentComplete = Math.min(100, Math.round((xhr.loaded / xhr.total) * 100));
+        progressText.innerText = `Forging 85MB of Digital Steel... ${percentComplete}% completed`;
       }
     },
     (error) => {

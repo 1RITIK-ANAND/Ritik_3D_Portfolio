@@ -537,7 +537,7 @@ import { createNurseGreeting } from './nurse.js';
     camera.lookAt(-modelRadius * (innerWidth < 700 ? 0.02 : 0.22), modelRadius * 0.08, 0);
   }
 
-  new GLTFLoader().load(
+ new GLTFLoader().load(
     'assessts/Ot.glb',
     (gltf) => {
       model.add(gltf.scene);
@@ -547,10 +547,30 @@ import { createNurseGreeting } from './nurse.js';
         mixer = new THREE.AnimationMixer(gltf.scene);
         gltf.animations.forEach((clip) => mixer.clipAction(clip).play());
       }
+
+      // Model successfully load hone ke baad loader ko hata dein
+      const loaderWrapper = document.getElementById('loader-wrapper');
+      if (loaderWrapper) {
+        loaderWrapper.style.opacity = '0';
+        setTimeout(() => {
+          loaderWrapper.style.display = 'none';
+        }, 500);
+      }
     },
-    undefined,
+    (xhr) => {
+      // Live progress percentage dikhane ke liye
+      const progressText = document.getElementById('progress-text');
+      if (xhr.lengthComputable && progressText) {
+        const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
+        progressText.innerText = `Loading: ${percentComplete}% completed`;
+      }
+    },
     (error) => {
       console.error('Could not load the OT background model:', error);
+      const progressText = document.getElementById('progress-text');
+      if (progressText) {
+        progressText.innerText = 'Error loading 3D model.';
+      }
     }
   );
 

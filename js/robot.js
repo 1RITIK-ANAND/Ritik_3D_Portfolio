@@ -13,8 +13,23 @@ import { createNurseGreeting } from './nurse.js';
   scene.fog = new THREE.Fog(0x071016, 18, 48);
 
   const camera = new THREE.PerspectiveCamera(42, innerWidth / innerHeight, 0.1, 150);
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'low-power' });
-  const maxPixelRatio = innerWidth < 700 ? Math.min(window.devicePixelRatio, 1.5) : window.devicePixelRatio;
+
+  // === SMART DEVICE PERFORMANCE DETECTION ===
+  const isMobile = innerWidth < 700;
+  const cpuCores = navigator.hardwareConcurrency || 4;
+  const deviceRAM = navigator.deviceMemory || 4; // GB mein
+  const isLowEndDevice = isMobile || cpuCores <= 4 || deviceRAM <= 4;
+
+  // Low-end devices ke liye antialias off kar diya jayega taaki lag na ho
+  const renderer = new THREE.WebGLRenderer({ 
+    canvas, 
+    alpha: true, 
+    antialias: !isLowEndDevice, 
+    powerPreference: 'low-power' 
+  });
+
+  // Low-end ke liye pixel ratio 1.0 (fast), high-end ke liye optimized max 1.35
+  const maxPixelRatio = isLowEndDevice ? 1.0 : Math.min(devicePixelRatio || 1, 1.35);
   renderer.setPixelRatio(maxPixelRatio);
   renderer.setSize(innerWidth, innerHeight, false);
   renderer.outputColorSpace = THREE.SRGBColorSpace;

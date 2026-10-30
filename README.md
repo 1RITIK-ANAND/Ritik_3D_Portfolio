@@ -29,3 +29,6 @@ I am a research-driven **M.Tech scholar in Manufacturing & Automation at NIT Ham
 * **Email:** [ritikanand243@gmail.com](mailto:ritikanand243@gmail.com)
 * **LinkedIn:** [ritikanand243](https://www.linkedin.com/in/ritikanand243)
 * **Portfolio:** [Interactive 3D Portfolio](https://1ritik-anand.github.io/Ritik_3D_Portfolio/)
+
+<img width="1777" height="861" alt="image" src="https://github.com/user-attachments/assets/80c119ff-9a23-46bf-bdbd-8e74d7eb337e" />
+

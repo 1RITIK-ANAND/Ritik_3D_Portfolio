@@ -562,7 +562,7 @@ import { createNurseGreeting } from './nurse.js';
       const progressText = document.getElementById('progress-text');
       if (xhr.lengthComputable && progressText) {
         const percentComplete = Math.min(100, Math.round((xhr.loaded / xhr.total) * 100));
-        progressText.innerText = `Forging 85MB of Digital Steel... ${percentComplete}% completed`;
+        progressText.innerText = `Stealing extra RAM from the matrix...... ${percentComplete}% completed`;
       }
     },
     (error) => {
